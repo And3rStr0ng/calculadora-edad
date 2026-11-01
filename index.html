@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+
+  <!-- Estilos necesarios del Datepicker (Flatpickr) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+  <!-- Tus estilos locales (sin enlaces externos de diseño) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Librerías JS -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+
+  <main class="card">
+    <h1>Age Calculator</h1>
+
+    <form id="age-form">
+      <div class="form-group">
+        <label for="birthdate">Enter your birth date:</label>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="birthdate" 
+            placeholder="DD/MM/YYYY" 
+            autocomplete="off"
+            required
+          />
+          <span class="calendar-icon">📅</span>
+        </div>
+      </div>
+
+      <button type="submit" id="btn-calculate">Calculate</button>
+    </form>
+
+    <p id="error-message" class="error hidden"></p>
+
+    <div id="result-container" class="result hidden">
+      <p>You are <strong id="result-text">--</strong> old</p>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
